@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <!-- ハンタータイプ・武器スロ -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/hunter_type"
+            android:textSize="14sp" />
+
+        <RadioGroup
+            android:id="@+id/rgHunterType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginStart="8dp">
+            <RadioButton android:id="@+id/rbSword" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:text="@string/sword" android:checked="true" />
+            <RadioButton android:id="@+id/rbGunner" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:text="@string/gunner" />
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/weapon_slots"
+            android:layout_marginStart="16dp"
+            android:textSize="14sp" />
+
+        <Spinner
+            android:id="@+id/spWeaponSlots"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp" />
+    </LinearLayout>
+
+    <!-- 選択中スキル -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="選択中スキル"
+        android:textStyle="bold"
+        android:layout_marginTop="8dp" />
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/chipSelectedSkills"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:singleLine="false" />
+
+    <!-- カテゴリ選択 -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="スキルカテゴリ"
+        android:textStyle="bold"
+        android:layout_marginTop="8dp" />
+
+    <Spinner
+        android:id="@+id/spCategory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvSkills"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="4dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/search"
+        android:layout_marginTop="8dp"
+        app:icon="@android:drawable/ic_menu_search" />
+</LinearLayout>

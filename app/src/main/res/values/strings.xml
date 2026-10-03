@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MHXX 頑シミュ</string>
+    <string name="search">検索</string>
+    <string name="skills">スキル選択</string>
+    <string name="results">検索結果</string>
+    <string name="settings">設定</string>
+    <string name="hunter_type">ハンタータイプ</string>
+    <string name="sword">剣士</string>
+    <string name="gunner">ガンナー</string>
+    <string name="weapon_slots">武器スロ</string>
+    <string name="max_results">頑張り度</string>
+    <string name="no_results">結果なし</string>
+    <string name="searching">検索中…</string>
+</resources>
